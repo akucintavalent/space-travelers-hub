@@ -1,3 +1,11 @@
 .logo {
   width: 4rem;
 }
+
+.NavLinkActive {
+  text-decoration: underline;
+}
+
+.NavLinkInactive {
+  text-decoration: none;
+}
