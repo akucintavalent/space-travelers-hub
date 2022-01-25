@@ -1,0 +1,23 @@
+.ActiveMember {
+  background-color: rgb(24, 162, 184);
+  width: 8.5rem;
+  color: white;
+}
+
+.InactiveMember {
+  background-color: rgb(109, 117, 125);
+  width: 8.5rem;
+  color: white;
+}
+
+.JoinMission {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(63, 68, 73);
+  color: rgb(63, 68, 73);
+}
+
+.LeaveMission {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(231, 114, 125);
+  color: rgb(231, 114, 125);
+}
