@@ -1,0 +1,30 @@
+.RocketContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+  margin: 0 5%;
+}
+
+.RocketsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.ReserveRocket {
+  background-color: rgb(0, 123, 255);
+  padding: 10px;
+  border: 0;
+  color: white;
+}
+
+.CancelReservation {
+  background-color: white;
+  border: 1px solid darkgray;
+  color: darkgray;
+  padding: 10px;
+}
