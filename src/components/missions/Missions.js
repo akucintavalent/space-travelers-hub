@@ -1,11 +1,32 @@
 import PropTypes from 'prop-types';
+import Mission from '../mission/Mission';
+import './Missions.css';
 
 const Missions = (props) => {
   const { missions } = props;
 
   return (
     <div>
-      {missions.map((mission) => (<div key={mission.mission_id}>{mission.mission_name}</div>))}
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <Mission
+              key={mission.mission_id}
+              mission_name={mission.mission_name}
+              description={mission.description}
+              status
+            />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
