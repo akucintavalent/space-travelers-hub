@@ -26,8 +26,10 @@ export const getRockets = () => (dispatch) => {
       }) => {
         const rocket = {
           id,
+          // eslint-disable-next-line camelcase
           rocket_name,
           description,
+          // eslint-disable-next-line camelcase
           flickr_images,
         };
         dispatch(addRocket(rocket));
