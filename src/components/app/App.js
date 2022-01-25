@@ -17,7 +17,7 @@ const App = () => {
       dispatch(removeAllMissions());
       dispatch(removeAllRockets());
     };
-  }, []);
+  }, [dispatch]);
 
   const missions = useSelector((state) => state.missionsReducer);
   const rockets = useSelector((state) => state.rocketsReducer);
