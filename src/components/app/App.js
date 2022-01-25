@@ -1,8 +1,8 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getMissions, removeAllMissions } from '../../redux/missions/missions';
 import { getRockets, removeAllRockets } from '../../redux/rockets/rockets';
+import { getMissions, removeAllMissions } from '../../redux/missions/missions';
 import Missions from '../missions/Missions';
 import MyProfile from '../my_profile/MyProfile';
 import Navbar from '../navbar/Navbar';
