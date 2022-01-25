@@ -9,10 +9,10 @@ const Navbar = () => (
       <h1>Space Travelers&apos; Hub</h1>
     </div>
     <nav className={styles.Nav}>
-      <NavLink to="rockets" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>Rockets</NavLink>
+      <NavLink to="/" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>Rockets</NavLink>
       <NavLink to="missions" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>Missions</NavLink>
       |
-      <NavLink to="/" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>My Profile</NavLink>
+      <NavLink to="my_profile" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>My Profile</NavLink>
     </nav>
   </header>
 );

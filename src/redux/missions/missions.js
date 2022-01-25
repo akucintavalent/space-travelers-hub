@@ -19,6 +19,7 @@ export const getMissions = () => (dispatch) => {
       missions.forEach((mission) => {
         // eslint-disable-next-line camelcase
         const { mission_id, mission_name, description } = mission;
+        // eslint-disable-next-line camelcase
         const newMission = { mission_id, mission_name, description };
         dispatch(addMission(newMission));
       });
