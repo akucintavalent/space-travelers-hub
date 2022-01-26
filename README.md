@@ -65,7 +65,7 @@ npx eslint . --fix
 ```bash
 npm start
 ```
-👤 **Bohdan Shcherbak **
+👤 **Bohdan Shcherbak**
 
 - [GitHub](https://github.com/akucintavalent)
 - [Twitter](https://twitter.com/ibodi828)
