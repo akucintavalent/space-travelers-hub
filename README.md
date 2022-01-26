@@ -6,12 +6,12 @@
 
 ## ScreenShoot
 ### Rockets
- > ![screenshot](./ScreenShoot/ScreenShootRocket.png)
+ > ![screenshot](./screenshots/rockets.png)
    ### Missions
- >![screenshot](./ScreenShoot/ScreenShootMissions.png)
+ >![screenshot](./screenshots/missions.png)
 
 ### My profile
- >![screenshot](./ScreenShoot/ScreenShootMyProfile.png)
+ >![screenshot](./screenshots/my_profile.png)
 ## Built With
 
 - HTML
@@ -65,7 +65,8 @@ npx eslint . --fix
 ```bash
 npm start
 ```
-👤 **Bohdan Shcherbak **
+
+👤 **Bohdan Shcherbak**
 
 - [GitHub](https://github.com/akucintavalent)
 - [Twitter](https://twitter.com/ibodi828)
