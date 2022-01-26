@@ -23,7 +23,11 @@ const Rocket = (props) => {
       <img src={image} alt="a rocket" />
       <div>
         <h3>{rocket_name}</h3>
-        <p>{description}</p>
+        <p>
+          {reserved && <span className="ReservedBadge">Reserved</span>}
+          {reserved && <span>&nbsp;&nbsp;</span>}
+          {description}
+        </p>
         {reserved
           ? (
             <button
