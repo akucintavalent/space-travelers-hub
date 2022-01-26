@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import axios from 'axios';
 
 const ADD_MISSION = 'space-travelers-hub/missions/ADD_MISSION';
@@ -23,7 +24,6 @@ export const getMissions = () => (dispatch) => {
     .then((response) => {
       const missions = response.data;
       missions.forEach((mission) => {
-        // eslint-disable-next-line camelcase
         const { mission_id, mission_name, description } = mission;
         const newMission = { mission_id, mission_name, description };
         dispatch(addMission(newMission));

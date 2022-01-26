@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import Rocket from '../rocket/Rocket';
 
@@ -9,10 +10,11 @@ const Rockets = (props) => {
       {rockets.map((rocket) => (
         <Rocket
           key={rocket.id}
+          id={rocket.id}
           rocket_name={rocket.rocket_name}
           description={rocket.description}
           image={rocket.flickr_images[0]}
-          isReserved={false}
+          reserved={!!rocket.reserved}
         />
       ))}
     </div>
