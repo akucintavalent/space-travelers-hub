@@ -95,4 +95,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-[MIT licensed]().
+[MIT licensed](https://github.com/akucintavalent/space-travelers-hub/blob/styling/MIT.md).
