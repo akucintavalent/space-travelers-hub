@@ -1,31 +1,47 @@
+/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../../redux/rockets/rockets';
 import './Rocket.css';
 
 const Rocket = (props) => {
   const {
-    // eslint-disable-next-line camelcase
-    rocket_name, description, image, isReserved,
+    id, rocket_name, description, image, reserved,
   } = props;
+  const dispatch = useDispatch();
+
+  const reserveRocketButton = () => {
+    dispatch(reserveRocket({ id }));
+  };
+
   return (
     <div className="RocketContainer">
       <img src={image} alt="a rocket" />
       <div>
-        { /* eslint-disable-next-line camelcase */ }
         <h3>{rocket_name}</h3>
         <p>{description}</p>
-        {isReserved
+        {reserved
           ? <button className="CancelReservation" type="button">Cancel Reservation</button>
-          : <button className="ReserveRocket" type="button">Reserve Rocket</button>}
+          : (
+            <button
+              className="ReserveRocket"
+              onClick={reserveRocketButton}
+              type="button"
+            >
+              Reserve Rocket
+            </button>
+          )}
       </div>
     </div>
   );
 };
 
 Rocket.propTypes = {
+  id: PropTypes.number.isRequired,
   rocket_name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  isReserved: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default Rocket;
