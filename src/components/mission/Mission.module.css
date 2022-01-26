@@ -2,22 +2,40 @@
   background-color: rgb(24, 162, 184);
   width: 8.5rem;
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .InactiveMember {
   background-color: rgb(109, 117, 125);
   width: 8.5rem;
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .JoinMission {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgb(63, 68, 73);
   color: rgb(63, 68, 73);
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .LeaveMission {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgb(231, 114, 125);
   color: rgb(231, 114, 125);
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
 }

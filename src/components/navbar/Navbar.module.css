@@ -29,3 +29,14 @@
   display: flex;
   gap: 1.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .Nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .VerticalLine {
+    display: none;
+  }
+}
