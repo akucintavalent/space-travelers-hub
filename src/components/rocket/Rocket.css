@@ -28,3 +28,8 @@ img {
   color: darkgray;
   padding: 10px;
 }
+
+.ReservedBadge {
+  background-color: rgb(24, 162, 184);
+  color: white;
+}
