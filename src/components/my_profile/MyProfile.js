@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import './MyProfile.css';
 
 const MyProfile = () => {
+  const missions = useSelector((state) => state.missionsReducer);
   const rockets = useSelector((state) => state.rocketsReducer);
   return (
     <div className="TablesContainer">
@@ -12,9 +13,13 @@ const MyProfile = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>My Missions</td>
-          </tr>
+          {missions
+            .filter((mission) => mission.reserved)
+            .map((mission) => (
+              <tr key={mission.mission_id}>
+                <td>{mission.mission_name}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
 
