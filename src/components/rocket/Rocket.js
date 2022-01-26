@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../../redux/rockets/rockets';
+import { cancelRocketBooking, reserveRocket } from '../../redux/rockets/rockets';
 import './Rocket.css';
 
 const Rocket = (props) => {
@@ -14,6 +14,10 @@ const Rocket = (props) => {
     dispatch(reserveRocket({ id }));
   };
 
+  const cancelRocketBookingButton = () => {
+    dispatch(cancelRocketBooking({ id }));
+  };
+
   return (
     <div className="RocketContainer">
       <img src={image} alt="a rocket" />
@@ -21,7 +25,15 @@ const Rocket = (props) => {
         <h3>{rocket_name}</h3>
         <p>{description}</p>
         {reserved
-          ? <button className="CancelReservation" type="button">Cancel Reservation</button>
+          ? (
+            <button
+              className="CancelReservation"
+              onClick={cancelRocketBookingButton}
+              type="button"
+            >
+              Cancel Reservation
+            </button>
+          )
           : (
             <button
               className="ReserveRocket"
