@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import axios from 'axios';
 
 const ADD_ROCKET = 'space-travelers-hub/rockets/ADD_ROCKET';
@@ -24,18 +25,14 @@ export const getRockets = () => (dispatch) => {
       const rockets = response.data;
       rockets.forEach(({
         id,
-        // eslint-disable-next-line camelcase
         rocket_name,
         description,
-        // eslint-disable-next-line camelcase
         flickr_images,
       }) => {
         const rocket = {
           id,
-          // eslint-disable-next-line camelcase
           rocket_name,
           description,
-          // eslint-disable-next-line camelcase
           flickr_images,
         };
         dispatch(addRocket(rocket));

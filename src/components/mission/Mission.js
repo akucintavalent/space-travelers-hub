@@ -1,32 +1,43 @@
+/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { joinMission } from '../../redux/missions/missions';
 import styles from './Mission.module.css';
 
 const Mission = (props) => {
-  // eslint-disable-next-line camelcase
-  const { mission_name, description, status } = props;
+  const {
+
+    mission_id, mission_name, description, reserved,
+  } = props;
+  const dispatch = useDispatch();
+
+  const joinMissionButton = () => {
+    dispatch(joinMission({ mission_id }));
+  };
+
   return (
     <tr>
-      {/* eslint-disable-next-line camelcase */}
       <td>{mission_name}</td>
       <td>{description}</td>
       <td>
-        {status
+        {reserved
           ? (<div className={styles.ActiveMember}>Active Member</div>)
           : (<div className={styles.InactiveMember}>NOT A MEMBER</div>)}
       </td>
       <td>
-        {status
+        {reserved
           ? (<button className={styles.LeaveMission} type="button">Leave Mission</button>)
-          : (<button className={styles.JoinMission} type="button">Join Mission</button>)}
+          : (<button onClick={joinMissionButton} className={styles.JoinMission} type="button">Join Mission</button>)}
       </td>
     </tr>
   );
 };
 
 Mission.propTypes = {
+  mission_id: PropTypes.string.isRequired,
   mission_name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  status: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default Mission;

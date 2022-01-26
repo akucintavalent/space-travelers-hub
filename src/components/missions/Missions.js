@@ -20,9 +20,10 @@ const Missions = (props) => {
           {missions.map((mission) => (
             <Mission
               key={mission.mission_id}
+              mission_id={mission.mission_id}
               mission_name={mission.mission_name}
               description={mission.description}
-              status
+              reserved={!!mission.reserved}
             />
           ))}
         </tbody>
