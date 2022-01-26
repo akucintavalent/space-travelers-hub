@@ -11,7 +11,7 @@ const Navbar = () => (
     <nav className={styles.Nav}>
       <NavLink to="/" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>Rockets</NavLink>
       <NavLink to="missions" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>Missions</NavLink>
-      |
+      <span className={styles.VerticalLine}>|</span>
       <NavLink to="my_profile" className={({ isActive }) => (isActive ? styles.NavLinkActive : styles.NavLinkInactive)}>My Profile</NavLink>
     </nav>
   </header>

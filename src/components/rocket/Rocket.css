@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 4fr;
   gap: 1rem;
   margin: 0 5%;
+  align-items: end;
 }
 
 .RocketsContainer {
@@ -13,6 +14,7 @@
 
 img {
   width: 100%;
+  padding-top: 1.5rem;
 }
 
 .ReserveRocket {
@@ -20,6 +22,7 @@ img {
   padding: 10px;
   border: 0;
   color: white;
+  border-radius: 5px;
 }
 
 .CancelReservation {
@@ -27,9 +30,14 @@ img {
   border: 1px solid darkgray;
   color: darkgray;
   padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .ReservedBadge {
   background-color: rgb(24, 162, 184);
   color: white;
+  padding: 2px;
+  border-radius: 5px;
+  font-weight: bold;
 }
