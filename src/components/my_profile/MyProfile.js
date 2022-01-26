@@ -3,6 +3,7 @@ import './MyProfile.css';
 
 const MyProfile = () => {
   const missions = useSelector((state) => state.missionsReducer);
+  const rockets = useSelector((state) => state.rocketsReducer);
   return (
     <div className="TablesContainer">
       <table>
@@ -29,9 +30,13 @@ const MyProfile = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>My Rockets</td>
-          </tr>
+          {rockets
+            .filter((rocket) => rocket.reserved)
+            .map((rocket) => (
+              <tr key={rocket.id}>
+                <td>{rocket.rocket_name}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
