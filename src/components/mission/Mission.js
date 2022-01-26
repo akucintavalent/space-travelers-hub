@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../../redux/missions/missions';
+import { joinMission, leaveMission } from '../../redux/missions/missions';
 import styles from './Mission.module.css';
 
 const Mission = (props) => {
@@ -15,6 +15,9 @@ const Mission = (props) => {
     dispatch(joinMission({ mission_id }));
   };
 
+  const leaveMissionButton = () => {
+    dispatch(leaveMission({ mission_id }));
+  };
   return (
     <tr>
       <td>{mission_name}</td>
@@ -26,7 +29,7 @@ const Mission = (props) => {
       </td>
       <td>
         {reserved
-          ? (<button className={styles.LeaveMission} type="button">Leave Mission</button>)
+          ? (<button className={styles.LeaveMission} onClick={leaveMissionButton} type="button">Leave Mission</button>)
           : (<button onClick={joinMissionButton} className={styles.JoinMission} type="button">Join Mission</button>)}
       </td>
     </tr>

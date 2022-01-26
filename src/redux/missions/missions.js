@@ -4,6 +4,7 @@ import axios from 'axios';
 const ADD_MISSION = 'space-travelers-hub/missions/ADD_MISSION';
 const REMOVE_ALL_MISSIONS = 'space-travelers-hub/missions/REMOVE_ALL_MISSIONS';
 const JOIN_MISSION = 'space-travelers-hub/missions/JOIN_MISSION';
+const LEAVE_MISSION = 'space-travelers-hub/missions/LEAVE_MISSION';
 
 const initialState = [];
 
@@ -16,6 +17,11 @@ export const removeAllMissions = () => ({ type: REMOVE_ALL_MISSIONS });
 
 export const joinMission = (payload) => ({
   type: JOIN_MISSION,
+  mission_id: payload.mission_id,
+});
+
+export const leaveMission = (payload) => ({
+  type: LEAVE_MISSION,
   mission_id: payload.mission_id,
 });
 
@@ -42,6 +48,11 @@ const reducer = (state = initialState, action) => {
       return state.map((mission) => {
         if (mission.mission_id !== action.mission_id) return mission;
         return { ...mission, reserved: true };
+      });
+    case LEAVE_MISSION:
+      return state.map((mission) => {
+        if (mission.mission_id !== action.mission_id) return mission;
+        return { ...mission, reserved: false };
       });
     default:
       return state;
