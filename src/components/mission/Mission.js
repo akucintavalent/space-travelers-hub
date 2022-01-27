@@ -6,7 +6,6 @@ import styles from './Mission.module.css';
 
 const Mission = (props) => {
   const {
-
     mission_id, mission_name, description, reserved,
   } = props;
   const dispatch = useDispatch();
