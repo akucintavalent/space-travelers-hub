@@ -3,9 +3,6 @@ import {
   render, screen, fireEvent, cleanup,
 } from '../test-utils';
 import App from '../components/app/App';
-import store from '../redux/configureStore';
-import { removeAllRockets } from '../redux/rockets/rockets';
-import { removeAllMissions } from '../redux/missions/missions';
 
 afterEach(cleanup);
 
