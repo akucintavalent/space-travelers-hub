@@ -1,7 +1,7 @@
 .logo {
   width: 3rem;
-  height: 3rem;
   margin-right: 1.3rem;
+  padding: 0;
 }
 
 .NavLinkActive {
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   border-bottom: 1px solid gray;
 }
 
