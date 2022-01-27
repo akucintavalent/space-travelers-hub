@@ -1,0 +1,20 @@
+table,
+th,
+td {
+  padding: 10px;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+table {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(242, 242, 242);
+}
+
+thead {
+  background-color: white;
+}

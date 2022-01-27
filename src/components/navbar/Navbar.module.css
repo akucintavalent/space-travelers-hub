@@ -1,0 +1,42 @@
+.logo {
+  width: 3rem;
+  margin-right: 1.3rem;
+  padding: 0;
+}
+
+.NavLinkActive {
+  text-decoration: underline;
+}
+
+.NavLinkInactive {
+  text-decoration: none;
+}
+
+.LogoAndTitle {
+  display: flex;
+  align-items: center;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.Nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .Nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .VerticalLine {
+    display: none;
+  }
+}
