@@ -2,7 +2,7 @@
 
 ## SPACE TRAVELERS HUB 
 
-> This is a capstone project, it is working with the real live data from the SpaceX API and build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> This is a capstone project, it is working with the real live data from the SpaceX API. It is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 ## ScreenShoot
 ### Rockets
